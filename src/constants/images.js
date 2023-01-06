@@ -37,10 +37,16 @@ import spaceCapsulePor from "../assets/technology/image-space-capsule-portrait.j
 import spacePortLan from "../assets/technology/image-spaceport-landscape.jpg";
 import spacePortPor from "../assets/technology/image-spaceport-portrait.jpg";
 
-const images = {
+export const images = {
+  closeIcon,
+  menuIcon,
+  logo,
+  bgHomeDesktop,
+  bgHomeMobile,
+  bgHomeTablet,
   bgCrewDesktop,
   bgCrewMobile,
-  bgCrewDesktop,
+  bgCrewTablet,
   anousheh,
   douglas,
   mark,
@@ -62,5 +68,3 @@ const images = {
   spacePortLan,
   spacePortPor,
 };
-
-export default images;
