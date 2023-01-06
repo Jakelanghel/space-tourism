@@ -12,7 +12,7 @@ import bgHomeTablet from "../assets/home/background-home-tablet.jpg";
 import bgCrewDesktop from "../assets/crew/background-crew-desktop.jpg";
 import bgCrewMobile from "../assets/crew/background-crew-mobile.jpg";
 import bgCrewTablet from "../assets/crew/background-crew-tablet.jpg";
-import Anousheh from "../assets/crew/image-anousheh-ansari.webp";
+import anousheh from "../assets/crew/image-anousheh-ansari.webp";
 import douglas from "../assets/crew/image-douglas-hurley.webp";
 import mark from "../assets/crew/image-mark-shuttleworth.webp";
 import victor from "../assets/crew/image-victor-glover.webp";
@@ -37,22 +37,14 @@ import spaceCapsulePor from "../assets/technology/image-space-capsule-portrait.j
 import spacePortLan from "../assets/technology/image-spaceport-landscape.jpg";
 import spacePortPor from "../assets/technology/image-spaceport-portrait.jpg";
 
-export const images = {
-  //   bkg: {
-  //     crew: { desktop: bgCrewDesktop, mobile: bgCrewMobile , tablet: bgCrewDesktop},
-  //     dest: { desktop: bgCrewDesktop, mobile: bgCrewMobile , tablet: bgCrewDesktop},
-
-  //   },
-
+const images = {
   bgCrewDesktop,
   bgCrewMobile,
   bgCrewDesktop,
-
-  Anousheh,
+  anousheh,
   douglas,
   mark,
   victor,
-
   bgDestDesktop,
   bgDestMobile,
   bgDestTablet,
@@ -70,3 +62,5 @@ export const images = {
   spacePortLan,
   spacePortPor,
 };
+
+export default images;
