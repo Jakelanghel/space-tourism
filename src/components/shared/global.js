@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
         --off-white: #d0d6f9;
     }
 
+    html {
+        overflow-x: hidden;
+    }
+
     * {
         margin: 0;
         padding: 0;

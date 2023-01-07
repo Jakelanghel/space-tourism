@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { GlobalStyles } from "./components/shared/global";
 
@@ -10,10 +10,11 @@ import Technology from "./components/pages/technology/Technology";
 import Nav from "./components/nav/Nav";
 
 function App() {
+  const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <>
       <GlobalStyles />
-      <Nav />
+      <Nav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
       <Routes>
         <Route base path="/" element={<Home />} />
         <Route path="/destination" element={<Destination />} />
