@@ -43,16 +43,24 @@ const Nav = (props) => {
             </div>
 
             <div className="container-nav-links">
-              <NavLink to="/" className="nav-link">
+              <NavLink to="/" className="nav-link" onClick={toggleNav}>
                 <span>00</span>Home
               </NavLink>
-              <NavLink to="/destination" className="nav-link">
+              <NavLink
+                to="/destination"
+                className="nav-link"
+                onClick={toggleNav}
+              >
                 <span>01</span>Destination
               </NavLink>
-              <NavLink to="/crew" className="nav-link">
+              <NavLink to="/crew" className="nav-link" onClick={toggleNav}>
                 <span>02</span>Crew
               </NavLink>
-              <NavLink to="/technology" className="nav-link">
+              <NavLink
+                to="/technology"
+                className="nav-link"
+                onClick={toggleNav}
+              >
                 <span>03</span>Technology
               </NavLink>
             </div>

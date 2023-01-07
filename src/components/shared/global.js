@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
         --black: #0b0d17;
         --white: #ffff;
         --off-white: #d0d6f9;
+        --grey: #4E5057;
     }
 
     html {
@@ -23,16 +24,25 @@ export const GlobalStyles = createGlobalStyle`
      }
 
     h1 {
-        font-size: 6rem;
+        font-size: 5rem;
         text-transform: uppercase;
 
     }
 
-    .title-span {
+    .title-sml {
         display: block;
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: 1.15rem;
+        font-size: 1.25rem;
+        font-weight: 300;
         letter-spacing: 2.75px;
+        text-transform: uppercase;
+
+        span {
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: var(--grey);
+            margin-right: 1rem;
+        }
         
     }
 

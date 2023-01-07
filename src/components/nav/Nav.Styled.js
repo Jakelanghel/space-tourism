@@ -56,4 +56,8 @@ export const StyledNav = styled.nav`
   .menu-icon {
     padding: 1rem 1.5rem;
   }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
 `;
