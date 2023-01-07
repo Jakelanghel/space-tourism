@@ -6,14 +6,15 @@ const Home = () => {
   console.log(data);
 
   return (
-    <StyledHome>
+    <StyledHome className="page-padding">
       <div className="container">
         <div className="container-copy">
           <h1>
-            <span>so you want to travel to</span>space
+            <span className="title-span">so, you want to travel to</span>
+            space
           </h1>
           <p>
-            Lest face it, fi you want to go to space, you might as well
+            Lest face it, if you want to go to space, you might as well
             genuinely go to outer space and not hover kind fo on the edge of it.
             Well sit back, and relax because we'll give you a truly out of this
             world experience!
@@ -21,7 +22,7 @@ const Home = () => {
         </div>
 
         <div className="container-btn">
-          <button>explore</button>
+          <button className="explore-btn">explore</button>
         </div>
       </div>
     </StyledHome>

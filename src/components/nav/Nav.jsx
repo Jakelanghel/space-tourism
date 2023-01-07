@@ -10,19 +10,33 @@ const Nav = () => {
         <img src={images.logo} alt="logo" />
       </div>
 
-      <div className="container-nav-links">
-        <NavLink to="/" className="nav-link">
-          <span>00</span>Home
-        </NavLink>
-        <NavLink to="/" className="nav-link">
-          <span>01</span>Destination
-        </NavLink>
-        <NavLink to="/" className="nav-link">
-          <span>02</span>Crew
-        </NavLink>
-        <NavLink to="/" className="nav-link">
-          <span>03</span>Technology
-        </NavLink>
+      <div className="container-menu-icon">
+        <img src={images.menuIcon} alt="open nav menu" className="menu-icon" />
+      </div>
+
+      <div className="container-menu">
+        <div className="container-close-btn">
+          <img
+            src={images.closeIcon}
+            alt="close nav menu"
+            className="filter-white close-icon"
+          />
+        </div>
+
+        <div className="container-nav-links">
+          <NavLink to="/" className="nav-link">
+            <span>00</span>Home
+          </NavLink>
+          <NavLink to="/" className="nav-link">
+            <span>01</span>Destination
+          </NavLink>
+          <NavLink to="/" className="nav-link">
+            <span>02</span>Crew
+          </NavLink>
+          <NavLink to="/" className="nav-link">
+            <span>03</span>Technology
+          </NavLink>
+        </div>
       </div>
     </StyledNav>
   );

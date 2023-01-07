@@ -19,7 +19,17 @@ export const GlobalStyles = createGlobalStyle`
      }
 
     h1 {
-        font-size: 150px;
+        font-size: 6rem;
+        text-transform: uppercase;
+
+    }
+
+    .title-span {
+        display: block;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.15rem;
+        letter-spacing: 2.75px;
+        
     }
 
     h2 {
@@ -37,9 +47,35 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     h5 {
-        font-family: 'Barlow Condensed', sans-serif;
-        font-size: 28px;
-        letter-spacing: 4.75px;
+      
     }
+
+    p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 2rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        
+    }
+
+    .page-padding {
+        padding: 0 1.5rem;
+        padding-top: 8rem
+    }
+
+
+    @media screen and (min-width: 400px) {
+        .page-padding {
+            padding: 0 2rem;
+            padding-top: 8rem
+        }  
+        p {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+            
+        }
+    }
+    
+
     
 `;
