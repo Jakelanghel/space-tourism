@@ -2,7 +2,7 @@ export const navVariants = {
   visible: {
     x: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
   hidden: {

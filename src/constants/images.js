@@ -16,6 +16,7 @@ import anousheh from "../assets/crew/image-anousheh-ansari.webp";
 import douglas from "../assets/crew/image-douglas-hurley.webp";
 import mark from "../assets/crew/image-mark-shuttleworth.webp";
 import victor from "../assets/crew/image-victor-glover.webp";
+import circle from "../assets/crew/circle-solid.svg";
 
 // DESTINATION IMAGES ==================================================================
 import bgDestDesktop from "../assets/destination/background-destination-desktop.jpg";
@@ -51,6 +52,7 @@ export const images = {
   douglas,
   mark,
   victor,
+  circle,
   bgDestDesktop,
   bgDestMobile,
   bgDestTablet,

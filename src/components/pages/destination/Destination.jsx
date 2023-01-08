@@ -4,31 +4,29 @@ import data from "../../../local-json/data.json";
 import { images } from "../../../constants/images";
 
 const Destination = () => {
-  const [currentPlanet, setCurrentPlanet] = useState(0);
-  const [planetData, setPlanetData] = useState(
-    data.destinations[currentPlanet]
-  );
+  const destinationsArr = data.destinations;
+
+  const [currentIndex, setCurrentIndex] = useState(0);
   const planetImages = [images.moon, images.mars, images.europa, images.titan];
 
   const handleClick = (e) => {
     const planet = e.target.textContent;
     const planetId = e.target.id;
-    setCurrentPlanet(planetId);
-    setPlanetData(data.destinations[planetId]);
+    setCurrentIndex(planetId);
   };
 
-  const getActive = () => {
+  const setActive = () => {
     const planetsArr = document.querySelectorAll(".planet");
     planetsArr.forEach((planet) => {
       planetsArr.forEach((p) => {
-        p.textContent === planetData.name
+        p.textContent === destinationsArr[currentIndex].name
           ? p.classList.add("active")
           : p.classList.remove("active");
       });
     });
   };
 
-  getActive();
+  setActive();
   return (
     <StyledDestination className="page-padding">
       <h2 className="title-sml">
@@ -38,7 +36,7 @@ const Destination = () => {
       <div className="container">
         <div className="container-img">
           <img
-            src={planetImages[currentPlanet]}
+            src={planetImages[currentIndex]}
             alt="planet"
             className="planet-img"
           />
@@ -46,7 +44,7 @@ const Destination = () => {
 
         <div className="container-copy">
           <ul>
-            <li id="0" className="planet" onClick={handleClick}>
+            <li id="0" className="planet active" onClick={handleClick}>
               Moon
             </li>
             <li id="1" className="planet" onClick={handleClick}>
@@ -61,15 +59,17 @@ const Destination = () => {
           </ul>
 
           <div className="container-description">
-            <h1 className="title">{planetData.name}</h1>
-            <p className="description">{planetData.description}</p>
+            <h1 className="title">{destinationsArr[currentIndex].name}</h1>
+            <p className="description">
+              {destinationsArr[currentIndex].description}
+            </p>
           </div>
 
           <div className="container-stats">
             <p className="sub-title">avg. distance</p>
-            <p className="data">{planetData.distance}</p>
+            <p className="data">{destinationsArr[currentIndex].distance}</p>
             <p className="sub-title">est travel time</p>
-            <p className="data">{planetData.travel}</p>
+            <p className="data">{destinationsArr[currentIndex].travel}</p>
           </div>
         </div>
       </div>

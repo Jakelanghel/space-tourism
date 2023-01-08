@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    img {
+        display: block;
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -31,11 +35,13 @@ export const GlobalStyles = createGlobalStyle`
 
     .title-sml {
         display: block;
-        font-family: 'Barlow Condensed', sans-serif;
         font-size: 1.25rem;
         font-weight: 300;
         letter-spacing: 2.75px;
         text-transform: uppercase;
+        color: var(--off-white);
+        font-family: 'Barlow Condensed', sans-serif;
+        
 
         span {
             font-weight: 900;
@@ -69,12 +75,13 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 300;
         line-height: 2rem;
         font-family: 'Barlow Condensed', sans-serif;
+        color: var(--off-white);
         
     }
 
     .page-padding {
         padding: 0 1.5rem;
-        padding-top: 8rem
+        padding-top: 6.5rem
     }
 
 

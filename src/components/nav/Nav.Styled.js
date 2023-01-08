@@ -27,7 +27,8 @@ export const StyledNav = styled.nav`
   }
 
   .close-icon {
-    width: 25px;
+    width: 55px;
+    padding: 1rem;
   }
 
   .container-nav-links {
