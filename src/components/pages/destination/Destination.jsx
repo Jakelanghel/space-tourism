@@ -3,7 +3,7 @@ import { StyledDestination } from "./Styled.Destination";
 import data from "../../../local-json/data.json";
 import { images } from "../../../constants/images";
 
-const Destination = () => {
+const Destination = (props) => {
   const destinationsArr = data.destinations;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,18 +15,8 @@ const Destination = () => {
     setCurrentIndex(planetId);
   };
 
-  const setActive = () => {
-    const planetsArr = document.querySelectorAll(".planet");
-    planetsArr.forEach((planet) => {
-      planetsArr.forEach((p) => {
-        p.textContent === destinationsArr[currentIndex].name
-          ? p.classList.add("active")
-          : p.classList.remove("active");
-      });
-    });
-  };
+  props.setActive(".planet", currentIndex);
 
-  setActive();
   return (
     <StyledDestination className="page-padding">
       <h2 className="title-sml">

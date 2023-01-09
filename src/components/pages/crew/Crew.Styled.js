@@ -21,10 +21,10 @@ export const StyledCrew = styled.main`
 
   .container-slider {
     order: 2;
-    width: 50%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
   }
 
   .container-slider:hover {
@@ -32,9 +32,9 @@ export const StyledCrew = styled.main`
   }
 
   .dot {
-    width: 45px;
-    height: 45px;
-    padding: 1rem;
+    width: 28px;
+    height: 28px;
+    padding: 0.5rem;
     filter: invert(29%) sepia(10%) saturate(372%) hue-rotate(189deg)
       brightness(97%) contrast(86%);
   }
@@ -54,7 +54,7 @@ export const StyledCrew = styled.main`
     margin-bottom: 1rem;
 
     span {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       color: var(--grey);
       display: block;
       margin-bottom: 0.5rem;

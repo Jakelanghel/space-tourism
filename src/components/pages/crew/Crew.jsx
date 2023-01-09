@@ -3,7 +3,7 @@ import { StyledCrew } from "./Crew.Styled";
 import data from "../../../local-json/data.json";
 import { images } from "../../../constants/images";
 
-const Crew = () => {
+const Crew = (props) => {
   const crewArr = data.crew;
   const [activeMember, setActiveMember] = useState(crewArr[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,6 +18,8 @@ const Crew = () => {
     const index = e.target.id;
     setCurrentIndex(index);
   };
+
+  props.setActive(".dot", currentIndex);
   return (
     <StyledCrew className="page-padding">
       <h2 className="title-sml">

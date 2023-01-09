@@ -11,14 +11,26 @@ import Nav from "./components/nav/Nav";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
+
+  const setActive = (query, index) => {
+    const elementsArr = document.querySelectorAll(`${query}`);
+    elementsArr.forEach((element) => {
+      element.id === index
+        ? element.classList.add("active")
+        : element.classList.remove("active");
+    });
+  };
   return (
     <>
       <GlobalStyles />
       <Nav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
       <Routes>
         <Route base path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/crew" element={<Crew />} />
+        <Route
+          path="/destination"
+          element={<Destination setActive={setActive} />}
+        />
+        <Route path="/crew" element={<Crew setActive={setActive} />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>
     </>
