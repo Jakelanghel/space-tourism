@@ -66,4 +66,5 @@ export const StyledDestination = styled.main`
     font-size: 2.25rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
+  }
 `;

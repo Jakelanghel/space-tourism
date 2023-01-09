@@ -20,6 +20,7 @@ export const StyledNav = styled.nav`
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(40px);
     padding: 2.5rem;
+    z-index: 01;
   }
 
   .container-close-btn {

@@ -8,6 +8,7 @@ export const StyledCrew = styled.main`
   background-size: cover;
   min-height: 100vh;
   padding-bottom: 7rem;
+  z-index: 0;
 
   h2 {
     margin-bottom: 2rem;

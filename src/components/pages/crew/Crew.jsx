@@ -5,7 +5,6 @@ import { images } from "../../../constants/images";
 
 const Crew = (props) => {
   const crewArr = data.crew;
-  const [activeMember, setActiveMember] = useState(crewArr[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const crewImgArr = [
     images.douglas,
@@ -15,11 +14,11 @@ const Crew = (props) => {
   ];
 
   const handleClick = (e) => {
-    const index = e.target.id;
-    setCurrentIndex(index);
+    const dotId = e.target.id;
+    props.setActive(".dot", dotId);
+    setCurrentIndex(dotId);
   };
 
-  props.setActive(".dot", currentIndex);
   return (
     <StyledCrew className="page-padding">
       <h2 className="title-sml">

@@ -1,14 +1,14 @@
-// SHARED IMAGES =======================================================================
+// SHARED =======================================================================
 import closeIcon from "../assets/shared/icon-close.svg";
 import menuIcon from "../assets/shared/icon-hamburger.svg";
 import logo from "../assets/shared/logo.svg";
 
-// HOME IMAGES =========================================================================
+// HOME  =========================================================================
 import bgHomeDesktop from "../assets/home/background-home-desktop.jpg";
 import bgHomeMobile from "../assets/home/background-home-mobile.jpg";
 import bgHomeTablet from "../assets/home/background-home-tablet.jpg";
 
-// CREW IMAGES ===========================================================================
+// CREW  ===========================================================================
 import bgCrewDesktop from "../assets/crew/background-crew-desktop.jpg";
 import bgCrewMobile from "../assets/crew/background-crew-mobile.jpg";
 import bgCrewTablet from "../assets/crew/background-crew-tablet.jpg";
@@ -18,7 +18,7 @@ import mark from "../assets/crew/image-mark-shuttleworth.webp";
 import victor from "../assets/crew/image-victor-glover.webp";
 import circle from "../assets/crew/circle-solid.svg";
 
-// DESTINATION IMAGES ==================================================================
+// DESTINATION  ==================================================================
 import bgDestDesktop from "../assets/destination/background-destination-desktop.jpg";
 import bgDestMobile from "../assets/destination/background-destination-mobile.jpg";
 import bgDestTablet from "../assets/destination/background-destination-tablet.jpg";

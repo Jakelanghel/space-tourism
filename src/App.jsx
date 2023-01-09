@@ -12,14 +12,12 @@ import Nav from "./components/nav/Nav";
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
 
-  const setActive = (query, index) => {
+  const setActive = (query, id) => {
     const elementsArr = document.querySelectorAll(`${query}`);
-    elementsArr.forEach((element) => {
-      element.id === index
-        ? element.classList.add("active")
-        : element.classList.remove("active");
-    });
+    elementsArr.forEach((element) => element.classList.remove("active"));
+    document.getElementById(`${id}`).classList.add("active");
   };
+
   return (
     <>
       <GlobalStyles />

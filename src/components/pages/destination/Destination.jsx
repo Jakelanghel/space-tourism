@@ -12,10 +12,9 @@ const Destination = (props) => {
   const handleClick = (e) => {
     const planet = e.target.textContent;
     const planetId = e.target.id;
+    props.setActive(".planet", planetId);
     setCurrentIndex(planetId);
   };
-
-  props.setActive(".planet", currentIndex);
 
   return (
     <StyledDestination className="page-padding">
