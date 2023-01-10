@@ -11,6 +11,10 @@ export const StyledDestination = styled.main`
 
   color: var(--white);
 
+  h1 {
+    font-size: 4rem;
+  }
+
   .container-img {
     width: 70%;
     margin: 2rem auto;
@@ -55,10 +59,8 @@ export const StyledDestination = styled.main`
     padding-bottom: 3rem;
   }
 
-  .sub-title {
-    text-transform: uppercase;
-    color: var(--off-white);
-    margin-bottom: 1rem;
+  .title-sml {
+    margin-bottom: 0.5rem;
   }
 
   .data {

@@ -21,11 +21,12 @@ export const StyledHome = styled.main`
   }
 
   span {
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   h1 {
-    margin-bottom: 1rem;
+    font-size: 5.5rem;
+    margin-bottom: 0.5rem;
   }
 
   p {
@@ -51,7 +52,7 @@ export const StyledHome = styled.main`
   }
 
   @media screen and (min-height: 800px) {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
   }
   @media screen and (min-height: 850px) {
     padding-bottom: 2rem;

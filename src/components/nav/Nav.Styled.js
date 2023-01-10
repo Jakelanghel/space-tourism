@@ -8,6 +8,7 @@ export const StyledNav = styled.nav`
   position: absolute;
   padding: 1.5rem;
   padding-right: 0;
+  z-index: 1;
 
   .container-menu {
     width: 70%;

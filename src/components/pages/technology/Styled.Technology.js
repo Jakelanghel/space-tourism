@@ -9,6 +9,7 @@ export const StyledTechnology = styled.main`
   text-align: center;
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 7rem;
 
   h1,
   h3 {
@@ -42,6 +43,11 @@ export const StyledTechnology = styled.main`
 
   button:hover {
     cursor: pointer;
+  }
+
+  .active {
+    background-color: var(--white);
+    color: var(--black);
   }
 
   .container {

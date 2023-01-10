@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { StyledCrew } from "./Crew.Styled";
-import data from "../../../local-json/data.json";
+import PageAnimation from "../../shared/page-animation/PageAnimation";
 import { images } from "../../../constants/images";
+import data from "../../../local-json/data.json";
 
 const Crew = (props) => {
   const crewArr = data.crew;
@@ -20,60 +21,62 @@ const Crew = (props) => {
   };
 
   return (
-    <StyledCrew className="page-padding">
-      <h2 className="title-sml">
-        <span>02</span>meet your crew
-      </h2>
+    <PageAnimation>
+      <StyledCrew className="page-padding">
+        <h2 className="title-sml">
+          <span>02</span>meet your crew
+        </h2>
 
-      <div className="container">
-        <div className="container-copy">
-          <h1>
-            <span>{crewArr[currentIndex].role}</span>
-            {crewArr[currentIndex].name}
-          </h1>
-          <p>{crewArr[currentIndex].bio}</p>
-        </div>
+        <div className="container">
+          <div className="container-copy">
+            <h1>
+              <span>{crewArr[currentIndex].role}</span>
+              {crewArr[currentIndex].name}
+            </h1>
+            <p>{crewArr[currentIndex].bio}</p>
+          </div>
 
-        <div className="container-img">
-          <img
-            src={crewImgArr[currentIndex]}
-            alt={`crew member ${crewArr[currentIndex].name}`}
-            className="crew-member-img"
-          />
-        </div>
+          <div className="container-img">
+            <img
+              src={crewImgArr[currentIndex]}
+              alt={`crew member ${crewArr[currentIndex].name}`}
+              className="crew-member-img"
+            />
+          </div>
 
-        <div className="container-slider">
-          <img
-            src={images.circle}
-            alt=""
-            id="0"
-            className="dot active"
-            onClick={handleClick}
-          />
-          <img
-            src={images.circle}
-            alt=""
-            id="1"
-            className="dot"
-            onClick={handleClick}
-          />
-          <img
-            src={images.circle}
-            alt=""
-            id="2"
-            className="dot"
-            onClick={handleClick}
-          />
-          <img
-            src={images.circle}
-            alt=""
-            id="3"
-            className="dot"
-            onClick={handleClick}
-          />
+          <div className="container-slider">
+            <img
+              src={images.circle}
+              alt=""
+              id="0"
+              className="dot active"
+              onClick={handleClick}
+            />
+            <img
+              src={images.circle}
+              alt=""
+              id="1"
+              className="dot"
+              onClick={handleClick}
+            />
+            <img
+              src={images.circle}
+              alt=""
+              id="2"
+              className="dot"
+              onClick={handleClick}
+            />
+            <img
+              src={images.circle}
+              alt=""
+              id="3"
+              className="dot"
+              onClick={handleClick}
+            />
+          </div>
         </div>
-      </div>
-    </StyledCrew>
+      </StyledCrew>
+    </PageAnimation>
   );
 };
 
