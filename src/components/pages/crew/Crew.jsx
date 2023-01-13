@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { StyledCrew } from "./Crew.Styled";
-import PageAnimation from "../../shared/page-animation/PageAnimation";
+import MotionDiv from "../page-animation/MotionDiv";
 import { images } from "../../../constants/images";
 import data from "../../../local-json/data.json";
+import { pageVariants } from "../../../variants/pageVariants";
 
 const Crew = (props) => {
   const crewArr = data.crew;
@@ -21,7 +22,7 @@ const Crew = (props) => {
   };
 
   return (
-    <PageAnimation>
+    <MotionDiv variants={pageVariants}>
       <StyledCrew className="page-padding">
         <h2 className="title-sml">
           <span>02</span>meet your crew
@@ -76,7 +77,7 @@ const Crew = (props) => {
           </div>
         </div>
       </StyledCrew>
-    </PageAnimation>
+    </MotionDiv>
   );
 };
 

@@ -70,6 +70,11 @@ export const StyledCrew = styled.main`
       brightness(97%) contrast(86%);
   }
 
+  .dot:hover {
+    filter: invert(48%) sepia(7%) saturate(220%) hue-rotate(193deg)
+      brightness(97%) contrast(87%);
+  }
+
   .active {
     filter: invert(99%) sepia(96%) saturate(2%) hue-rotate(210deg)
       brightness(107%) contrast(100%);

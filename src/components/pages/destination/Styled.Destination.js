@@ -33,9 +33,9 @@ export const StyledDestination = styled.main`
   }
 
   li {
+    color: var(--off-white);
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--off-white);
     text-transform: uppercase;
     font-family: "Barlow Condensed", sans-serif;
     padding: 8px 0;
@@ -43,9 +43,12 @@ export const StyledDestination = styled.main`
 
   li:hover {
     cursor: pointer;
+    color: var(--white);
+    border-bottom: solid 2px var(--off-white);
   }
 
   .active {
+    color: var(--white);
     border-bottom: solid 2px var(--off-white);
   }
 

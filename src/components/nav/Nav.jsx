@@ -1,13 +1,16 @@
-import React from "react";
-import { StyledNav } from "./Nav.Styled";
-import { NavLink } from "react-router-dom";
-import { images } from "../../constants/images";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+import NavLinks from "./nav-links/NavLinks";
+import { StyledNav } from "./Nav.Styled";
+import { images } from "../../constants/images";
 import { navVariants } from "../../variants/navVariants";
 
-const Nav = (props) => {
+const Nav = () => {
+  const [navIsOpen, setNavIsOpen] = useState(false);
+
   const toggleNav = () => {
-    props.setNavIsOpen((oldState) => !oldState);
+    setNavIsOpen((oldState) => !oldState);
   };
   return (
     <StyledNav>
@@ -25,7 +28,7 @@ const Nav = (props) => {
       </div>
 
       <AnimatePresence mode="wait">
-        {props.navIsOpen ? (
+        {navIsOpen ? (
           <motion.div
             variants={navVariants}
             initial="hidden"
@@ -33,37 +36,7 @@ const Nav = (props) => {
             exit="exit"
             className="container-menu"
           >
-            <div className="container-close-btn">
-              <img
-                src={images.closeIcon}
-                alt="close nav menu"
-                className="filter-white close-icon"
-                onClick={toggleNav}
-              />
-            </div>
-
-            <div className="container-nav-links">
-              <NavLink to="/" className="nav-link" onClick={toggleNav}>
-                <span>00</span>Home
-              </NavLink>
-              <NavLink
-                to="/destination"
-                className="nav-link"
-                onClick={toggleNav}
-              >
-                <span>01</span>Destination
-              </NavLink>
-              <NavLink to="/crew" className="nav-link" onClick={toggleNav}>
-                <span>02</span>Crew
-              </NavLink>
-              <NavLink
-                to="/technology"
-                className="nav-link"
-                onClick={toggleNav}
-              >
-                <span>03</span>Technology
-              </NavLink>
-            </div>
+            <NavLinks toggleNav={toggleNav} />
           </motion.div>
         ) : null}
       </AnimatePresence>

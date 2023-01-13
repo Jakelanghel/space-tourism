@@ -24,38 +24,6 @@ export const StyledNav = styled.nav`
     z-index: 01;
   }
 
-  .container-close-btn {
-    margin-left: auto;
-  }
-
-  .close-icon {
-    width: 55px;
-    padding: 1rem;
-  }
-
-  .container-nav-links {
-    display: flex;
-    flex-direction: column;
-    margin-top: 3rem;
-  }
-
-  .nav-link {
-    font-size: 1.45rem;
-    color: var(--off-white);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-
-    span {
-      font-size: 1.25rem;
-      font-weight: 900;
-      margin-right: 1rem;
-      letter-spacing: 3px;
-    }
-  }
-
   .menu-icon {
     padding: 1rem 1.5rem;
   }

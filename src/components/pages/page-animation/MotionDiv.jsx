@@ -1,11 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { pageVariants } from "../../../variants/pageVariants";
 
-const PageAnimation = ({ children }) => {
+const MotionDiv = ({ children, ...props }) => {
   return (
     <motion.div
-      variants={pageVariants}
+      variants={props.variants}
       initial="hidden"
       animate="visible"
       exit="exit"
@@ -15,4 +14,4 @@ const PageAnimation = ({ children }) => {
   );
 };
 
-export default PageAnimation;
+export default MotionDiv;

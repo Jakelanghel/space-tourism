@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { StyledTechnology } from "./Styled.Technology";
-import PageAnimation from "../../shared/page-animation/PageAnimation";
+import PageAnimation from "../page-animation/MotionDiv";
 import { images } from "../../../constants/images";
 import data from "../../../local-json/data.json";
+import { pageVariants } from "../../../variants/pageVariants";
 
 const Technology = (props) => {
   const techArr = data.technology;
@@ -20,7 +21,7 @@ const Technology = (props) => {
   };
 
   return (
-    <PageAnimation>
+    <PageAnimation variants={pageVariants}>
       <StyledTechnology className="page-padding">
         <h2 className="title-sml">
           <span>03</span>space launch 101

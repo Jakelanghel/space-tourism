@@ -14,13 +14,19 @@ export const GlobalStyles = createGlobalStyle`
         background-color: var(--black);
     }
 
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
     img {
         display: block;
     }
 
     * {
-        margin: 0;
-        padding: 0;
         box-sizing: border-box;
     }
 
@@ -53,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     p {
-        font-size: 1.16rem;
+        font-size: 1.35rem;
         font-weight: 300;
         line-height: 2.15rem;
         font-family: 'Barlow Condensed', sans-serif;
@@ -94,13 +100,13 @@ export const GlobalStyles = createGlobalStyle`
         }
 
         .page-padding {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;            
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;            
             padding-top: 9rem
         }
          
         p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             line-height: 2.5rem;
             
         }

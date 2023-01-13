@@ -1,10 +1,11 @@
 import React from "react";
 import { StyledHome } from "./Home.Styled";
-import PageAnimation from "../../shared/page-animation/PageAnimation";
+import MotionDiv from "../page-animation/MotionDiv";
+import { pageVariants } from "../../../variants/pageVariants";
 
 const Home = () => {
   return (
-    <PageAnimation>
+    <MotionDiv variants={pageVariants}>
       <StyledHome className="page-padding">
         <div className="container">
           <div className="container-copy">
@@ -20,10 +21,11 @@ const Home = () => {
 
           <div className="container-btn">
             <button className="explore-btn">explore</button>
+            <div className="btn-background"></div>
           </div>
         </div>
       </StyledHome>
-    </PageAnimation>
+    </MotionDiv>
   );
 };
 

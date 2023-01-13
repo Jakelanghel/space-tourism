@@ -32,22 +32,24 @@ export const StyledTechnology = styled.main`
   }
 
   button {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: var(--white);
     font-family: "Bellefair", serif;
     background-color: transparent;
     border: solid 2px var(--grey);
-    padding: 0.5rem 1.15rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50%;
   }
 
   button:hover {
     cursor: pointer;
+    border: solid 2px var(--white);
   }
 
   .active {
     background-color: var(--white);
     color: var(--black);
+    border: solid 2px var(--white);
   }
 
   .container {
@@ -69,7 +71,7 @@ export const StyledTechnology = styled.main`
 
   .container-btns {
     order: 2;
-    width: 175px;
+    width: 215px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

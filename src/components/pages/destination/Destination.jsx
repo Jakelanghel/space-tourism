@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { StyledDestination } from "./Styled.Destination";
-import PageAnimation from "../../shared/page-animation/PageAnimation";
 import { images } from "../../../constants/images";
-import data from "../../../local-json/data.json";
 import { pageVariants } from "../../../variants/pageVariants";
+import MotionDiv from "../page-animation/MotionDiv";
+import data from "../../../local-json/data.json";
 
 const Destination = (props) => {
   const destinationsArr = data.destinations;
@@ -18,7 +18,7 @@ const Destination = (props) => {
   };
 
   return (
-    <PageAnimation variants={pageVariants}>
+    <MotionDiv variants={pageVariants}>
       <StyledDestination className="page-padding">
         <h2 className="title-sml">
           <span>01</span>pick your destination
@@ -65,7 +65,7 @@ const Destination = (props) => {
           </div>
         </div>
       </StyledDestination>
-    </PageAnimation>
+    </MotionDiv>
   );
 };
 
