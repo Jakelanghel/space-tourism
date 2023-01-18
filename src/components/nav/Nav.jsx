@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import NavLinks from "./nav-links/NavLinks";
@@ -7,11 +7,27 @@ import { images } from "../../constants/images";
 import { navVariants } from "../../variants/navVariants";
 
 const Nav = () => {
-  const [navIsOpen, setNavIsOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.screen.width);
+  const isLrg = screenWidth >= 800 ? true : false;
+  const [navIsOpen, setNavIsOpen] = useState(isLrg);
 
   const toggleNav = () => {
-    setNavIsOpen((oldState) => !oldState);
+    !isLrg ? setNavIsOpen((oldState) => !oldState) : null;
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.screen.width;
+      width >= 800 ? setNavIsOpen(true) : setNavIsOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <StyledNav>
       <div className="container-logo">

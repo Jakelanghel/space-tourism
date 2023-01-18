@@ -5,7 +5,7 @@ export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   padding: 1.5rem;
   padding-right: 0;
   z-index: 1;
@@ -30,5 +30,20 @@ export const StyledNav = styled.nav`
 
   .menu-icon:hover {
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding: 1.5rem 3rem;
+    .container-menu {
+      width: 65%;
+      height: auto;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #151923;
+      padding: 0;
+      z-index: 01;
+    }
   }
 `;

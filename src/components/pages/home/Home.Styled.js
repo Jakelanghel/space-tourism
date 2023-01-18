@@ -14,23 +14,29 @@ export const StyledHome = styled.main`
   text-align: center;
   color: var(--off-white);
 
-  span {
-    margin-bottom: 1.25rem;
+  .home-title {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
   }
 
-  h1 {
-    font-size: 5.5rem;
-    margin-bottom: 0.5rem;
+  .home-subtitle {
+    display: block;
+    font-size: 1.35rem;
+    font-weight: 300;
+    letter-spacing: 2.75px;
+    text-transform: uppercase;
+    color: var(--off-white);
+    font-family: "Barlow Condensed", sans-serif;
+    margin-bottom: 1.5rem;
   }
 
-  p {
-    max-width: 350px;
-    margin: 0 auto;
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 
   .container-btn {
-    margin-top: 5rem;
-    padding-bottom: 66px;
+    margin-top: 3.5rem;
   }
 
   .explore-btn {
@@ -48,10 +54,6 @@ export const StyledHome = styled.main`
     position: relative;
   }
 
-  .explore-btn:hover + .btn-background {
-    opacity: 1;
-  }
-
   .btn-background {
     border-radius: 50%;
     width: 316px;
@@ -65,14 +67,59 @@ export const StyledHome = styled.main`
     opacity: 0;
   }
 
-  @media screen and (min-height: 800px) {
-    padding-bottom: 1rem;
+  @media screen and (min-width: 475px) {
+    background-image: url(${images.bgHomeTablet});
   }
-  @media screen and (min-height: 850px) {
-    padding-bottom: 2rem;
+
+  @media screen and (min-height: 800px) {
+    .container-btn {
+      margin-top: 5.5rem;
+    }
+  }
+
+  @media screen and (min-height: 840px) {
+    .container-btn {
+      margin-top: 8rem;
+    }
   }
 
   @media screen and (min-height: 900px) {
-    padding-bottom: 3rem;
+    .container-btn {
+      margin-top: 8.5rem;
+    }
   }
+
+  /* TABLET =================================================*/
+
+  @media screen and (min-width: 800px) {
+    background-image: url(${images.bgHomeTablet});
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    color: var(--off-white);
+
+    .home-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .home-title {
+      font-size: 10rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .title-sml {
+      text-align: center;
+    }
+
+    .container-btn {
+      margin-top: 11rem;
+    }
+  }
+
+  /* DESKTOP */
+  /* .explore-btn:hover + .btn-background {
+    opacity: 1;
+  } */
 `;

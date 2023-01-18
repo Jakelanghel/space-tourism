@@ -28,46 +28,34 @@ export const GlobalStyles = createGlobalStyle`
 
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
     h1, h2, h3, h4 {
-        font-family: 'Bellefair', serif;   
+        font-family: 'Bellefair', serif; 
+        margin: 0;
+        padding: 0;  
      }
-
+     
     h1 {
         text-transform: uppercase;
     }
 
-    
-
-    h2 {
-        font-size: 100px;
-
-    }
-
-    h3 {
-        font-size: 56px;
-
-    }
-
-    h4 {
-        font-size: 32px;
-    }
-
-    h5 {
-      
-    }
-
     p {
-        font-size: 1.35rem;
+        max-width: 400px;
+        font-size: 1.25rem;
         font-weight: 300;
         line-height: 2.15rem;
         font-family: 'Barlow Condensed', sans-serif;
         color: var(--off-white);
-        
+        margin: 0 auto;
     }
 
-    .title-sml {
+
+    
+
+    .page-title {
         display: block;
         font-size: 1.15rem;
         font-weight: 300;
@@ -75,7 +63,7 @@ export const GlobalStyles = createGlobalStyle`
         text-transform: uppercase;
         color: var(--off-white);
         font-family: 'Barlow Condensed', sans-serif;
-        
+        margin-bottom: 3rem;
 
         span {
             font-weight: 900;
@@ -106,9 +94,32 @@ export const GlobalStyles = createGlobalStyle`
         }
          
         p {
-            font-size: 1.25rem;
+            font-size: 1.45rem;
             line-height: 2.5rem;
             
+        }
+    }
+
+    /* TABLET ======================================================*/
+
+    @media screen and (min-width: 800px) {
+       
+        p {
+            max-width: 515px;
+            font-size: 1.5rem
+        }
+
+        .page-padding {
+            padding-left: 5rem;
+            padding-right: 5rem;            
+            padding-top: 12rem
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+            letter-spacing: 2.75px;
+            text-align: left;
+            margin-bottom: 5rem;
         }
     }
     

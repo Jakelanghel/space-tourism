@@ -8,11 +8,16 @@ import { pageVariants } from "../../../variants/pageVariants";
 const Technology = (props) => {
   const techArr = data.technology;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const techImages =
-    window.screen.width <= 900
-      ? [images.launchLan, images.spacePortLan, images.spaceCapsuleLan]
-      : [images.launchPor, images.spacePortPor, images.spaceCapsulePor];
+  // const techImages =
+  //   window.screen.width <= 900
+  //     ? [images.launchLan, images.spacePortLan, images.spaceCapsuleLan]
+  //     : [images.launchPor, images.spacePortPor, images.spaceCapsulePor];
 
+  const techImages = [
+    images.launchLan,
+    images.spacePortLan,
+    images.spaceCapsuleLan,
+  ];
   const handleClick = (e) => {
     const id = e.target.id;
     console.log(id);
@@ -23,7 +28,7 @@ const Technology = (props) => {
   return (
     <PageAnimation variants={pageVariants}>
       <StyledTechnology className="page-padding">
-        <h2 className="title-sml">
+        <h2 className="page-title">
           <span>03</span>space launch 101
         </h2>
 
@@ -41,9 +46,9 @@ const Technology = (props) => {
           </div>
 
           <div className="container-copy">
-            <h3>the terminology...</h3>
-            <h1>{techArr[currentIndex].name}</h1>
-            <p>{techArr[currentIndex].description}</p>
+            <h3 className="subtitle">the terminology...</h3>
+            <h1 className="title">{techArr[currentIndex].name}</h1>
+            <p className="description">{techArr[currentIndex].description}</p>
           </div>
 
           <div className="container-img">

@@ -8,21 +8,17 @@ export const StyledCrew = styled.main`
   background-size: cover;
   padding-bottom: 6rem;
 
-  h1 {
+  .name {
     font-size: 1.75rem;
     color: var(--white);
     margin-bottom: 1rem;
 
-    span {
+    .role {
       font-size: 1.15rem;
       color: var(--grey);
       display: block;
       margin-bottom: 0.5rem;
     }
-  }
-
-  h2 {
-    margin-bottom: 2rem;
   }
 
   .container {
@@ -52,10 +48,10 @@ export const StyledCrew = styled.main`
   }
 
   .container-slider {
-    width: 35%;
+    max-width: 100px;
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem auto;
+    margin: 2.25rem auto;
   }
 
   .container-slider:hover {
@@ -78,5 +74,41 @@ export const StyledCrew = styled.main`
   .active {
     filter: invert(99%) sepia(96%) saturate(2%) hue-rotate(210deg)
       brightness(107%) contrast(100%);
+  }
+
+  @media screen and (min-width: 800px) {
+    background-image: url(${images.bgCrewTablet});
+    padding-bottom: 0;
+
+    .container-copy {
+      order: 1;
+    }
+
+    .container-slider {
+      order: 2;
+      margin-bottom: 5rem;
+    }
+
+    .container-img {
+      order: 3;
+      width: 100%;
+      border: none;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+
+      .role {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .crew-member-img {
+      height: auto;
+      object-fit: cover;
+      margin: 0 auto;
+    }
   }
 `;

@@ -11,22 +11,30 @@ export const StyledTechnology = styled.main`
   padding-right: 0;
   padding-bottom: 7rem;
 
-  h1,
-  h3 {
-    color: var(--white);
+  .page-padding {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  h1 {
-    font-size: 1.75rem;
+  .page-title {
     margin-bottom: 1rem;
   }
 
-  h3 {
-    font-size: 1rem;
+  .title,
+  .subtitle {
+    color: var(--white);
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--white);
     font-family: "Barlow Condensed", sans-serif;
     margin-bottom: 0.75rem;
   }
@@ -65,21 +73,24 @@ export const StyledTechnology = styled.main`
 
   .tech-img {
     width: 100%;
-    height: 200px;
     object-fit: cover;
   }
 
   .container-btns {
     order: 2;
     width: 215px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin: 1rem auto;
     margin-bottom: 2rem;
   }
 
   .container-copy {
     order: 3;
     padding: 0 1rem;
+  }
+
+  .page-title {
+    padding-left: 3rem;
   }
 `;

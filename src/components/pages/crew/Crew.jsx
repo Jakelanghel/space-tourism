@@ -24,14 +24,14 @@ const Crew = (props) => {
   return (
     <MotionDiv variants={pageVariants}>
       <StyledCrew className="page-padding">
-        <h2 className="title-sml">
+        <h2 className="page-title">
           <span>02</span>meet your crew
         </h2>
 
         <div className="container">
           <div className="container-copy">
-            <h1>
-              <span>{crewArr[currentIndex].role}</span>
+            <h1 className="name">
+              <span className="role">{crewArr[currentIndex].role}</span>
               {crewArr[currentIndex].name}
             </h1>
             <p>{crewArr[currentIndex].bio}</p>

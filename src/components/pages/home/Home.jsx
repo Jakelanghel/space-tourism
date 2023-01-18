@@ -9,8 +9,8 @@ const Home = () => {
       <StyledHome className="page-padding">
         <div className="container">
           <div className="container-copy">
-            <span className="title-sml">so, you want to travel to</span>
-            <h1>space</h1>
+            <span className="home-subtitle">so, you want to travel to</span>
+            <h1 className="home-title">space</h1>
             <p>
               Lest face it, if you want to go to space, you might as well
               genuinely go to outer space and not hover kind fo on the edge of

@@ -46,4 +46,28 @@ export const StyledNavLinks = styled.div`
   .active {
     border-bottom: solid 2.5px var(--white);
   }
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+    justify-content: center;
+
+    .container-nav-links {
+      flex-direction: row;
+      gap: 1rem;
+      margin-top: 0;
+    }
+
+    .container-close-btn {
+      display: none;
+    }
+
+    .nav-link {
+      margin-bottom: 0;
+      padding: 2rem 1.5rem;
+
+      span {
+        display: none;
+      }
+    }
+  }
 `;

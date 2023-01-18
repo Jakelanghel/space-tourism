@@ -20,7 +20,7 @@ const Destination = (props) => {
   return (
     <MotionDiv variants={pageVariants}>
       <StyledDestination className="page-padding">
-        <h2 className="title-sml">
+        <h2 className="page-title">
           <span>01</span>pick your destination
         </h2>
 
@@ -50,17 +50,24 @@ const Destination = (props) => {
             </ul>
 
             <div className="container-description">
-              <h1>{destinationsArr[currentIndex].name}</h1>
-              <p className="description">
+              <h1 className="planet-name">
+                {destinationsArr[currentIndex].name}
+              </h1>
+              <p className="planet-description">
                 {destinationsArr[currentIndex].description}
               </p>
             </div>
 
             <div className="container-stats">
-              <p className="title-sml">avg. distance</p>
-              <p className="data">{destinationsArr[currentIndex].distance}</p>
-              <p className="title-sml">est travel time</p>
-              <p className="data">{destinationsArr[currentIndex].travel}</p>
+              <div className="stat mg-btm">
+                <p className="stat-title">avg. distance</p>
+                <p className="data">{destinationsArr[currentIndex].distance}</p>
+              </div>
+
+              <div className="stat">
+                <p className="stat-title">est travel time</p>
+                <p className="data">{destinationsArr[currentIndex].travel}</p>
+              </div>
             </div>
           </div>
         </div>
