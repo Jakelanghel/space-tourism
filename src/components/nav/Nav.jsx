@@ -7,18 +7,21 @@ import { images } from "../../constants/images";
 import { navVariants } from "../../variants/navVariants";
 
 const Nav = () => {
-  const [screenWidth, setScreenWidth] = useState(window.screen.width);
-  const isLrg = screenWidth >= 800 ? true : false;
-  const [navIsOpen, setNavIsOpen] = useState(isLrg);
+  const [isMobile, setIsMobile] = useState(
+    window.screen.width < 800 ? true : false
+  );
+
+  const [navIsOpen, setNavIsOpen] = useState(isMobile ? false : true);
 
   const toggleNav = () => {
-    !isLrg ? setNavIsOpen((oldState) => !oldState) : null;
+    isMobile ? setNavIsOpen((oldState) => !oldState) : null;
   };
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.screen.width;
-      width >= 800 ? setNavIsOpen(true) : setNavIsOpen(false);
+      console.log(width);
+      setNavIsOpen(window.screen.width >= 800 ? true : false);
     };
 
     window.addEventListener("resize", handleResize);
@@ -27,6 +30,8 @@ const Nav = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  console.log(navIsOpen);
 
   return (
     <StyledNav>

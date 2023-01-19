@@ -124,4 +124,34 @@ export const StyledDestination = styled.main`
       max-width: 350px;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    .container-img {
+      width: 100%;
+    }
+
+    .planet-img {
+      width: 100%;
+      max-width: 500px;
+      margin: 0;
+    }
+
+    ul {
+      max-width: 300px;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 2rem;
+    }
+  }
 `;

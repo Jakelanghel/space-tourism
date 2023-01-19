@@ -13,8 +13,6 @@ export const StyledNav = styled.nav`
   .container-menu {
     width: 70%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
@@ -34,16 +32,28 @@ export const StyledNav = styled.nav`
 
   @media screen and (min-width: 800px) {
     padding: 1.5rem 3rem;
+
+    .container-menu-icon {
+      display: none;
+    }
     .container-menu {
-      width: 65%;
       height: auto;
       flex-direction: column;
       position: absolute;
-      top: 0;
-      right: 0;
       background-color: #151923;
-      padding: 0;
+      padding: 0 3rem;
       z-index: 01;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding: 1.5rem 3rem;
+    .container-menu {
+      width: 65%;
+      height: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(40px);
+      padding: 0;
     }
   }
 `;

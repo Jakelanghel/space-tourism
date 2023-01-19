@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
         background-color: var(--black);
     }
 
@@ -122,6 +122,42 @@ export const GlobalStyles = createGlobalStyle`
             margin-bottom: 5rem;
         }
     }
+
+    /* DESKTOP ======================================================*/
+
+
+    @media screen and (min-width: 1025px) {
+       
+       p {
+           max-width: 515px;
+           font-size: 1.5rem;
+           margin: 0;
+       }
+
+       .page-title {
+           font-size: 1.5rem;
+           letter-spacing: 2.75px;
+           text-align: left;
+           margin-bottom: 3rem;
+       }
+
+       .container-flex {
+            flex-direction: row;
+       }
+   }
+
+
+   @media screen and (min-width: 1400px) {
+        .page-padding {
+            /* padding-left: 10rem; */
+            /* padding-right: 10rem;             */
+        }
+   }
+
+
+
+
+
     
 
     

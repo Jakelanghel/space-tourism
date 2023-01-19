@@ -111,4 +111,26 @@ export const StyledCrew = styled.main`
       margin: 0 auto;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container-img {
+      width: 45%;
+    }
+
+    .container-copy {
+      width: 45%;
+    }
+
+    .container-slider {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 `;

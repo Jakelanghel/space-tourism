@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledTechnology } from "./Styled.Technology";
 import PageAnimation from "../page-animation/MotionDiv";
 import { images } from "../../../constants/images";
@@ -8,16 +8,22 @@ import { pageVariants } from "../../../variants/pageVariants";
 const Technology = (props) => {
   const techArr = data.technology;
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [techImages, setTechImages] = useState(
+    window.screen.width <= 800
+      ? [images.launchLan, images.spacePortLan, images.spaceCapsuleLan]
+      : [images.launchPor, images.spacePortPor, images.spaceCapsulePor]
+  );
   // const techImages =
   //   window.screen.width <= 900
   //     ? [images.launchLan, images.spacePortLan, images.spaceCapsuleLan]
   //     : [images.launchPor, images.spacePortPor, images.spaceCapsulePor];
 
-  const techImages = [
-    images.launchLan,
-    images.spacePortLan,
-    images.spaceCapsuleLan,
-  ];
+  // const techImages = [
+  //   images.launchLan,
+  //   images.spacePortLan,
+  //   images.spaceCapsuleLan,
+  // ];
   const handleClick = (e) => {
     const id = e.target.id;
     console.log(id);
@@ -25,9 +31,26 @@ const Technology = (props) => {
     setCurrentIndex(id);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.screen.width;
+      setTechImages(
+        width <= 800
+          ? [images.launchLan, images.spacePortLan, images.spaceCapsuleLan]
+          : [images.launchPor, images.spacePortPor, images.spaceCapsulePor]
+      );
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <PageAnimation variants={pageVariants}>
-      <StyledTechnology className="page-padding">
+      <StyledTechnology className="padding">
         <h2 className="page-title">
           <span>03</span>space launch 101
         </h2>

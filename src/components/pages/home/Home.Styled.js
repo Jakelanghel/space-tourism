@@ -54,19 +54,6 @@ export const StyledHome = styled.main`
     position: relative;
   }
 
-  .btn-background {
-    border-radius: 50%;
-    width: 316px;
-    height: 300px;
-    background-color: #24262f;
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-    opacity: 0;
-  }
-
   @media screen and (min-width: 475px) {
     background-image: url(${images.bgHomeTablet});
   }
@@ -114,12 +101,77 @@ export const StyledHome = styled.main`
     }
 
     .container-btn {
-      margin-top: 11rem;
+      margin-top: 8rem;
     }
   }
 
-  /* DESKTOP */
-  /* .explore-btn:hover + .btn-background {
+  /* DESKTOP ================================================*/
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+
+    background-image: url(${images.bgHomeDesktop});
+    background-position: right -300px center;
+
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 5rem;
+    }
+
+    .home-subtitle {
+      margin-bottom: 2rem;
+    }
+
+    .home-title {
+      margin-bottom: 1rem;
+    }
+
+    .title-sml {
+      text-align: center;
+    }
+
+    .container-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 11rem;
+      position: relative;
+    }
+
+    .explore-btn {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: var(--black);
+      font-family: "Bellefair", serif;
+      letter-spacing: 2px;
+      background-color: var(--off-white);
+      border: none;
+      border-radius: 50%;
+      width: 225px;
+      height: 225px;
+      z-index: 1;
+      position: relative;
+    }
+
+    .btn-background {
+      border-radius: 50%;
+      width: 335px;
+      height: 335px;
+      background-color: #24262f;
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      opacity: 0;
+    }
+  }
+
+  .explore-btn:hover + .btn-background {
     opacity: 1;
-  } */
+  }
+
+  .explore-btn:hover {
+    cursor: pointer;
+  }
 `;

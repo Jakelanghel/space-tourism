@@ -10,11 +10,7 @@ export const StyledTechnology = styled.main`
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 7rem;
-
-  .page-padding {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  padding-top: 8rem;
 
   .page-title {
     margin-bottom: 1rem;
@@ -92,5 +88,58 @@ export const StyledTechnology = styled.main`
 
   .page-title {
     padding-left: 3rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding-top: 12rem;
+
+    .tech-img {
+      height: 500px;
+      object-position: center bottom;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    text-align: left;
+
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 3rem;
+    }
+
+    .container-btns {
+      order: 1;
+      width: 10%;
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 0;
+      padding-top: 5rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      padding: 0;
+      height: 100px;
+      width: 100px;
+    }
+
+    .container-copy {
+      width: 35%;
+      order: 2;
+      padding: 0;
+      padding-top: 5rem;
+    }
+
+    .container-img {
+      width: 40%;
+      order: 3;
+      margin: 2rem 0;
+    }
+
+    .tech-img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 `;
