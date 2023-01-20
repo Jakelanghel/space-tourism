@@ -101,6 +101,7 @@ export const StyledTechnology = styled.main`
 
   @media screen and (min-width: 1025px) {
     text-align: left;
+    background-image: url(${images.bgTechDesktop});
 
     .container {
       flex-direction: row;
@@ -112,6 +113,8 @@ export const StyledTechnology = styled.main`
       order: 1;
       width: 10%;
       flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
       margin: 0;
       margin-bottom: 0;
       padding-top: 5rem;

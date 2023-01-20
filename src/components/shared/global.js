@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-
+import { images } from "../../constants/images";
 export const GlobalStyles = createGlobalStyle`
 
     :root {
@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     html {
         /* overflow-x: hidden; */
         background-color: var(--black);
+        background-image: url(${images.bgDestDesktop});
     }
 
     html,
@@ -51,9 +52,6 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--off-white);
         margin: 0 auto;
     }
-
-
-    
 
     .page-title {
         display: block;

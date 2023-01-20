@@ -37,6 +37,7 @@ export const StyledNav = styled.nav`
       display: none;
     }
     .container-menu {
+      min-width: 600px;
       height: auto;
       flex-direction: column;
       position: absolute;
@@ -47,13 +48,41 @@ export const StyledNav = styled.nav`
   }
 
   @media screen and (min-width: 1025px) {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 0;
+    margin: 2rem 3rem;
+
     .container-menu {
-      width: 65%;
+      width: 50%;
+      min-width: 700px;
+      max-width: 800px;
       height: auto;
-      background-color: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(40px);
+      background-color: rgba(72, 75, 84, 0.1);
+      backdrop-filter: blur(20px);
       padding: 0;
+    }
+
+    .container-menu::before {
+      content: "";
+      width: 175px;
+      height: 2px;
+      background-color: var(--grey);
+      position: absolute;
+      top: 50%;
+      left: -150px;
+      transform: translateY(-50%);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .container-menu::before {
+      width: 450px;
+      left: -400px;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .container-menu::before {
+      width: 650px;
+      left: -600px;
     }
   }
 `;

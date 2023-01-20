@@ -117,20 +117,29 @@ export const StyledCrew = styled.main`
     .container {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
     }
 
     .container-img {
       width: 45%;
     }
 
-    .container-copy {
-      width: 45%;
-    }
-
     .container-slider {
       position: absolute;
       bottom: 0;
+    }
+
+    .container-copy {
+      width: 45%;
+      margin-top: 12rem;
+    }
+
+    .name {
+      font-size: 2.75rem;
+
+      .role {
+        font-size: 1.7rem;
+        margin-bottom: 0.1rem;
+      }
     }
   }
 `;

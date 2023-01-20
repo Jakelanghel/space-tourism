@@ -115,7 +115,7 @@ export const StyledHome = styled.main`
     .container {
       flex-direction: row;
       justify-content: space-between;
-      padding-top: 5rem;
+      padding-top: 10rem;
     }
 
     .home-subtitle {
