@@ -63,17 +63,17 @@ export const StyledNav = styled.nav`
 
     .container-menu::before {
       content: "";
-      width: 175px;
+      width: 250px;
       height: 2px;
       background-color: var(--grey);
       position: absolute;
       top: 50%;
-      left: -150px;
+      left: -225px;
       transform: translateY(-50%);
     }
   }
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1200px) {
     .container-menu::before {
       width: 450px;
       left: -400px;

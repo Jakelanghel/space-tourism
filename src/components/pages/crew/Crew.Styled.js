@@ -86,7 +86,7 @@ export const StyledCrew = styled.main`
 
     .container-slider {
       order: 2;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
 
     .container-img {
@@ -106,7 +106,7 @@ export const StyledCrew = styled.main`
     }
 
     .crew-member-img {
-      height: auto;
+      height: 600px;
       object-fit: cover;
       margin: 0 auto;
     }
@@ -117,6 +117,7 @@ export const StyledCrew = styled.main`
     .container {
       flex-direction: row;
       justify-content: space-between;
+      height: 100%;
     }
 
     .container-img {
@@ -130,7 +131,7 @@ export const StyledCrew = styled.main`
 
     .container-copy {
       width: 45%;
-      margin-top: 12rem;
+      margin-top: 8rem;
     }
 
     .name {

@@ -145,10 +145,10 @@ export const GlobalStyles = createGlobalStyle`
    }
 
 
-   @media screen and (min-width: 1400px) {
+   @media screen and (min-width: 1200px) {
         .page-padding {
-            /* padding-left: 10rem; */
-            /* padding-right: 10rem;             */
+            padding-left: 8rem;
+            padding-right: 8rem;            
         }
    }
 

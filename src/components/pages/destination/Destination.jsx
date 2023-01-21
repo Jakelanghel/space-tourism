@@ -1,7 +1,10 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { StyledDestination } from "./Styled.Destination";
 import { images } from "../../../constants/images";
 import { pageVariants } from "../../../variants/pageVariants";
+import { planetVariants } from "../../../variants/planetVariants";
+import { AnimatePresence } from "framer-motion";
 import MotionDiv from "../page-animation/MotionDiv";
 import data from "../../../local-json/data.json";
 
@@ -24,7 +27,13 @@ const Destination = (props) => {
           <span>01</span>pick your destination
         </h2>
 
-        <div className="container">
+        <motion.div
+          key={currentIndex}
+          variants={planetVariants}
+          initial="hidden"
+          animate="visible"
+          className="container"
+        >
           <div className="container-img">
             <img
               src={planetImages[currentIndex]}
@@ -70,7 +79,7 @@ const Destination = (props) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </StyledDestination>
     </MotionDiv>
   );

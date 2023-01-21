@@ -64,7 +64,8 @@ export const StyledTechnology = styled.main`
   .container-img {
     order: 1;
     width: 100%;
-    margin: 2rem 0;
+    max-width: 500px;
+    margin: 2rem auto;
   }
 
   .tech-img {
@@ -106,6 +107,7 @@ export const StyledTechnology = styled.main`
     .container {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       padding-left: 3rem;
     }
 
@@ -143,6 +145,31 @@ export const StyledTechnology = styled.main`
     .tech-img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .page-title {
+      padding-left: 5rem;
+    }
+    .container {
+      padding-left: 5rem;
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .title {
+      font-size: 3.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: "Barlow Condensed", sans-serif;
+      margin-bottom: 0.75rem;
     }
   }
 `;
