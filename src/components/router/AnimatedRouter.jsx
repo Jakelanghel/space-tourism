@@ -14,7 +14,11 @@ const AnimatedRouter = (props) => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route base path="/" element={<Home variants={pageVariants} />} />
+        <Route
+          base
+          path="/https://jakelanghel.github.io/space-tourism"
+          element={<Home variants={pageVariants} />}
+        />
         <Route
           path="/destination"
           element={
