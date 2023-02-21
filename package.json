@@ -1,5 +1,6 @@
 {
   "name": "space-tourism-app",
+  "homepage": "https://jakelanghel.github.io/space-tourism/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
