@@ -152,6 +152,13 @@ export const GlobalStyles = createGlobalStyle`
         }
    }
 
+   @media screen and (min-width: 1600px) {
+        .page-padding {
+            padding-left: 12rem;
+            padding-right: 12rem;            
+        }
+   }
+
 
 
 

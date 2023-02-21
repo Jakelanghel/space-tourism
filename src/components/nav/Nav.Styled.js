@@ -30,9 +30,13 @@ export const StyledNav = styled.nav`
     cursor: pointer;
   }
 
-  @media screen and (min-width: 800px) {
-    padding: 1.5rem 3rem;
+  @media screen and (min-width: 450px) {
+    padding: 1.5rem 2rem;
+    padding-right: 1rem;
+  }
 
+  @media screen and (min-width: 800px) {
+    padding-left: 4rem;
     .container-menu-icon {
       display: none;
     }
@@ -48,9 +52,7 @@ export const StyledNav = styled.nav`
   }
 
   @media screen and (min-width: 1025px) {
-    padding: 1.5rem 0;
-    margin: 2rem 3rem;
-
+    margin-top: 3rem;
     .container-menu {
       width: 50%;
       min-width: 700px;
@@ -63,26 +65,27 @@ export const StyledNav = styled.nav`
 
     .container-menu::before {
       content: "";
-      width: 250px;
+      width: 225px;
       height: 2px;
       background-color: var(--grey);
       position: absolute;
       top: 50%;
-      left: -225px;
+      left: -185px;
       transform: translateY(-50%);
     }
   }
 
   @media screen and (min-width: 1200px) {
+    padding-left: 6rem;
     .container-menu::before {
-      width: 450px;
-      left: -400px;
+      width: 350px;
+      left: -300px;
     }
   }
   @media screen and (min-width: 1400px) {
     .container-menu::before {
-      width: 650px;
-      left: -600px;
+      width: 500px;
+      left: -475px;
     }
   }
 `;

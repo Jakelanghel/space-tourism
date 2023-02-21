@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import NavLinks from "./nav-links/NavLinks";
@@ -7,21 +7,18 @@ import { images } from "../../constants/images";
 import { navVariants } from "../../variants/navVariants";
 
 const Nav = () => {
-  const [isMobile, setIsMobile] = useState(
-    window.screen.width < 800 ? true : false
+  const [navIsOpen, setNavIsOpen] = useState(
+    window.innerWidth >= 800 ? true : false
   );
 
-  const [navIsOpen, setNavIsOpen] = useState(isMobile ? false : true);
-
   const toggleNav = () => {
-    isMobile ? setNavIsOpen((oldState) => !oldState) : null;
+    window.innerWidth < 800 ? setNavIsOpen((oldState) => !oldState) : null;
   };
 
   useEffect(() => {
     const handleResize = () => {
-      const width = window.screen.width;
-      console.log(width);
-      setNavIsOpen(window.screen.width >= 800 ? true : false);
+      const width = window.innerWidth;
+      setNavIsOpen(width >= 800 ? true : false);
     };
 
     window.addEventListener("resize", handleResize);
@@ -30,8 +27,6 @@ const Nav = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  console.log(navIsOpen);
 
   return (
     <StyledNav>

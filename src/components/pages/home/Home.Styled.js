@@ -110,7 +110,7 @@ export const StyledHome = styled.main`
     text-align: left;
 
     background-image: url(${images.bgHomeDesktop});
-    background-position: right -300px center;
+    /* background-position: right -300px center; */
 
     .container {
       flex-direction: row;
@@ -133,8 +133,6 @@ export const StyledHome = styled.main`
     .container-btn {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-top: 11rem;
       position: relative;
     }
 
@@ -157,9 +155,12 @@ export const StyledHome = styled.main`
       border-radius: 50%;
       width: 335px;
       height: 335px;
-      background-color: #24262f;
+      width: 375px;
+      height: 375px;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(2px);
       position: absolute;
-      bottom: -45px;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
       z-index: 0;
